@@ -24,8 +24,11 @@ for (let i = 3; i > 0; i--) {
     }
     //A esta parte llega cuando no completo las dos contraseñas iguales
     if (i == 1 & contraseña != confirmContraseña) {
-        console.log('Tenes que ejercitar la memoria')
+        console.log('Tenes que ejercitar la memoria, toque enter para finalizar')
+        prompt()
     }
 }
+
+
 
 
