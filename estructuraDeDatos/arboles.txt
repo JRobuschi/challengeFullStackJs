@@ -1,0 +1,19 @@
+1) El nodo raiz es el 'A'.
+2) Hay 7 caminos diferendes de longitud 3 , son: ABFG , BFGH ,ACJK,CJKL,CJKM,AENP,AENQ.
+3) No , por ejemplo f no es padre de b.
+4) ACJ son los ancestros.
+5) AE son los ancestros.
+6) M no tiene descendientes propios.
+7) Los nodos hojas son: H, I, L, M, D, P, Q.
+8) La altura es 4.
+9) La altura es 5.
+10) Tiene de profundidad 1.
+11) El hermano es el E.
+12) No no son hermanos.
+13) Si.
+14) No, ya que es un descendientes.
+15) A la izquierda BFGHI y a la derecha DENPQ.
+16) Tiene 4 hijos, son: BCDE.
+17) Preorden: ABFGHCIJKLMDENPQ.
+    Postorden: HGFBILMKJCDPQNEA.
+    Inorden: HGFBAICLKMJDPNQE.
