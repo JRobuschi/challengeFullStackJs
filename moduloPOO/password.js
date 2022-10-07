@@ -1,3 +1,5 @@
+const prompt = require("prompt-sync")({ sigint: true });
+
 class Password {
     longitud = 8;
     contraSenia = 'nullnull';
@@ -7,7 +9,6 @@ class Password {
             this.contraSenia = 'nullnull'
         } else {
 
-            console.log('AAAAAAA')
             var pass = '';
             var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
                 'abcdefghijklmnopqrstuvwxyz0123456789@#$';
@@ -25,7 +26,7 @@ class Password {
         }
     }
     constructorLongitud(largo) {
-        //creamos una password
+        //Uni el el generador automatico de password con el de la longitud
         if (largo === undefined) {
             this.largo = 8;
 
@@ -97,8 +98,28 @@ class Password {
     setLongitud(largo) {
         this.longitud = largo;
     }
+
+    setContrasenia(contraSenia) {
+        this.contraSenia = contraSenia;
+    }
+
 }
 
-var passwordOne = new Password(10);
-console.log(passwordOne);
-console.log(('Es fuerte? '), passwordOne.esFuerte())
+
+
+function controlarPassword() {
+
+    var passwordOne = new Password();
+
+    passwordOne.setContrasenia(prompt('Ingresa una Contraseña: '));
+
+    var resultado = passwordOne.esFuerte();
+
+    console.log(('Tu password es: '), passwordOne.getContrasenia());
+    console.log(('Es fuerte? '), resultado);
+}
+
+controlarPassword();
+//passwordOne = prompt('Ingresa una Contraseña: ');
+
+//console.log(('Es fuerte? '), resultado);
